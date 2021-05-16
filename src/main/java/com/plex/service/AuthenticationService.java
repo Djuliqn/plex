@@ -4,7 +4,6 @@ import com.plex.dto.AuthRequest;
 import com.plex.dto.UserDto;
 import com.plex.model.mysql.Role;
 import com.plex.model.mysql.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -22,7 +21,6 @@ public class AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
 
-    @Autowired
     public AuthenticationService(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }

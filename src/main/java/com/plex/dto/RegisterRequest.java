@@ -5,18 +5,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-import java.util.Set;
+import javax.validation.constraints.NotBlank;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class UserDto {
+public class RegisterRequest {
 
-    private Long id;
+    @NotBlank
     private String username;
+
+    @NotBlank
     private String email;
-    private LocalDateTime createdAt;
-    private Set<String> authorities;
+
+    @NotBlank
+    private String password;
 }
